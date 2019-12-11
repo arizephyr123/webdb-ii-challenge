@@ -36,7 +36,7 @@ exports.up = function(knex, Promise) {
     //title status
     tbl.string("clean_title", 255).defaultTo("true");
 
-    ///*
+    /*
 tbl.integer("sale_id")
 .unsigned()
 .notNullable()
@@ -44,10 +44,10 @@ tbl.integer("sale_id")
 .inTable("sales")
 .onDelete("CASCADE")
 .onUpdate("CASCADE")
-    //*/
+    */
   });
 };
 
 exports.down = function(knex, Promise) {
-  return knex.schema.dropTableIfExists("carsData").dropTableIfExists("sales");
+  return knex.schema.dropTableIfExists("carsData")//.dropTableIfExists("sales");
 };
